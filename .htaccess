@@ -1,0 +1,54 @@
+<IfModule mod_rewrite.c>
+Header set Access-Control-Allow-Origin "*"
+
+RewriteEngine on
+
+RewriteRule ^login$ login.php [L,QSA]
+RewriteRule ^dashboard$ dashboard.php [L,QSA]
+RewriteRule ^dashboard_topup$ dashboard_topup.php [L,QSA]
+RewriteRule ^dashboard_withdraw$ dashboard_withdraw.php [L,QSA]
+RewriteRule ^deposit-auto$ deposit-auto.php [L,QSA]
+RewriteRule ^deposit-manual$ deposit-manual.php [L,QSA]
+RewriteRule ^transfer$ transfer.php [L,QSA]
+RewriteRule ^withdraw$ withdraw.php [L,QSA]
+RewriteRule ^withdraw_auto$ withdraw_auto.php [L,QSA]
+RewriteRule ^winloss$ winloss.php [L,QSA]
+RewriteRule ^register-user$ register-user.php [L,QSA]
+RewriteRule ^bonus$ bonus.php [L,QSA]
+RewriteRule ^freecredit$ freecredit.php [L,QSA]
+RewriteRule ^daily_report$ daily_report.php [L,QSA]
+RewriteRule ^user$ user.php [L,QSA]
+RewriteRule ^user_block$ user_block.php [L,QSA]
+RewriteRule ^bank_config$ bank_config.php [L,QSA]
+RewriteRule ^config_promotion$ config_promotion.php [L,QSA]
+RewriteRule ^config_fixed_deposit$ config_fixed_deposit.php [L,QSA]
+RewriteRule ^config_game_turnover$ config_game_turnover.php [L,QSA]
+RewriteRule ^config_checkin$ config_checkin.php [L,QSA]
+RewriteRule ^config_staff$ config_staff.php [L,QSA]
+RewriteRule config_website$ config_website.php [L,QSA]
+RewriteRule config_game$ config_game.php [L,QSA]
+RewriteRule ^history$ history.php [L,QSA]
+RewriteRule ^log$ log.php [L,QSA]
+RewriteRule ^unauthorized$ 401.php [L,QSA]
+
+RewriteRule ^customer/([a-z]+)/([0-9]+)$ user_edit.php?type=$1&id=$2 [L,QSA]
+RewriteRule ^withdraw/detail/([0-9]+)$ withdraw_detail.php?id=$1 [L,QSA]
+RewriteRule ^deposit/([0-9]+)$ deposit_detail.php?id=$1 [L,QSA]
+
+RewriteRule ^system/login$ api/login.php [L,QSA]
+RewriteRule ^system/logout$ api/logout.php [L,QSA]
+RewriteRule ^system/api_config_staff$ api/api_config_staff.php [L,QSA]
+RewriteRule ^system/api_config_promotion$ api/api_config_promotion.php [L,QSA]
+RewriteRule ^system/api_config_promotion_fixed_deposit$ api/api_config_promotion_fixed_deposit.php [L,QSA]
+RewriteRule ^system/api_config_checkin$ api/api_config_checkin.php [L,QSA]
+RewriteRule ^system/api_bank_config$ api/api_bank_config.php [L,QSA]
+RewriteRule ^system/api_customer$ api/api_customer.php [L,QSA]
+RewriteRule ^system/api_withdraw$ api/api_withdraw.php [L,QSA]
+RewriteRule ^system/api_winloss$ api/api_winloss.php [L,QSA]
+RewriteRule ^system/api_freecredit$ api/api_freecredit.php [L,QSA]
+RewriteRule ^system/api_deposit$ api/api_deposit.php [L,QSA]
+RewriteRule ^system/getbalance$ api/getbalance.php [L,QSA]
+RewriteRule ^howto$ howto.php [L,QSA]
+
+
+</IfModule>
