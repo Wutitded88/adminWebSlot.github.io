@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once 'api/config.php';
 if(!empty(get_session()))
 {
